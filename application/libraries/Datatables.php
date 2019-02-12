@@ -18,7 +18,7 @@ class Datatables
         $this->table = $table;
     }
 
-    public function setSelect($str)
+    public function setSelect(array $str)
     {
         $this->select = $str;
     }
@@ -63,7 +63,7 @@ class Datatables
         $CI = & get_instance();
         $CI->load->database();
 
-        $aColumns      = explode(", ", $this->select);
+        $aColumns      = $this->select;
         $searchColumns = $aColumns;
         $sTable        = $this->table;
 
@@ -95,14 +95,15 @@ class Datatables
             $limit = " LIMIT ".(int) $_GET['length'];
         }
 
+        /**
+         *
+         * order[0][column]: 1
+           order[0][dir]: asc
+         */
+        
         $text_order_by_datatable = "";
-        if (isset($_GET['iSortCol_0'])) {
-            for ($i = 0; $i < intval($_GET['iSortingCols']); $i++) {
-                $coma = ($i < intval($_GET['iSortingCols']) - 1) ? ", " : "";
-                if ($_GET['bSortable_'.intval($_GET['iSortCol_'.$i])] == 'true') {
-                    $text_order_by_datatable .= " ".$searchColumns[(int) $_GET['iSortCol_'.$i]]." ".strtoupper($_GET['sSortDir_'.$i]).$coma;
-                }
-            }
+        if($_GET['order']){
+            $text_order_by_datatable .= " ".$searchColumns[(int) $_GET['order'][0]['column']]." ".strtoupper($_GET['order'][0]['dir']);
         }
 
         $text_order_by = "";
@@ -204,7 +205,7 @@ class Datatables
             $join .= " ".$type_join." JOIN ".$this->join[$i][0]." ON ".$this->join[$i][1]." ";
         }
 
-        $sql          = "SELECT ".$this->select." FROM ".$sTable.$join.$where.$wherein.$like.$text_group_by.$text_order_by.$limit;
+        $sql          = "SELECT ".implode(',',$this->select)." FROM ".$sTable.$join.$where.$wherein.$like.$text_group_by.$text_order_by.$limit;
         $rResult      = $CI->db->query($sql);
         $iTotal       = count($rResult->result());
         $sql_all_data = "SELECT COUNT(*) AS found_rows FROM ".$sTable.$join.$where.$wherein;
@@ -223,15 +224,14 @@ class Datatables
             'data'            => array()
         );
 
-//        var_dump($aColumns);
-        //fixeando key
+
         foreach ($aColumns as $k => $val) {
             if (strpos($val, 'AS')) {
                 $newKey       = explode('AS', $val);
                 $aColumns[$k] = trim($newKey[1]);
             }
         }
-//        var_dump($aColumns);
+
         foreach ($rResult->result_array() as $aRow) {
             $row = array();
             for ($i = 0; $i < count($aColumns); $i++) {

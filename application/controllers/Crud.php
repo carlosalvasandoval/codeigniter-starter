@@ -20,7 +20,7 @@ class Crud extends MY_Controller
         $this->validation_rules();
         if ($this->form_validation->run() == FALSE) {
             $data = $this->load_data();
-            $this->load->template('crud/create', $data);
+            $this->load->template('crud/create_edit', $data);
         } else {
             $data = post_mapping();
             $this->Crud_model->create($data);
@@ -34,7 +34,7 @@ class Crud extends MY_Controller
         $this->validation_rules();
         if ($this->form_validation->run() == FALSE) {
             $data = $this->load_data($crud_id);
-            $this->load->template('crud/create', $data);
+            $this->load->template('crud/create_edit', $data);
         } else {
             $data = post_mapping();
             $this->Crud_model->update($crud_id, $data);
@@ -47,10 +47,10 @@ class Crud extends MY_Controller
     {
         $MetroCubicoObj = $this->Crud_model->getBy(['id' => $crud_id]);
         if (empty($MetroCubicoObj)) {
-            create_flash_message("El registro no existe", 'warning');
+            create_flash_message(lang('app_msg_no_row'), 'warning');
         } else {
             $this->Crud_model->delete($crud_id);
-            create_flash_message("El registro se eliminó exitosamente");
+            create_flash_message(lang('app_msg_after_delete'));
         }
         redirect(base_url('crud/index'));
     }

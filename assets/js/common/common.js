@@ -41,7 +41,7 @@ var config_datatable = {
   ],
   "bProcessing": true,
   "serverSide": true,
-  "ordering": false
+  "ordering": true
 };
 $(function () {
   var dtable = $(".dataTable").dataTable().api();
