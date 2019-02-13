@@ -33,3 +33,5 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /application/config/production/
 /application/config/testing/
 .htaccess
+/assets/img/source/
+/assets/img/thumbs/
