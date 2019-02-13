@@ -47,7 +47,7 @@ class MY_Model extends CI_Model
         return $this->db
                 ->where($where)
                 ->get($this->table)
-                ->resutl();
+                ->result();
     }
 
 }
