@@ -1,3 +1,6 @@
+
+![](https://bytebucket.org/carlosalva/codeigniter-starter/raw/90060387beb47155f7671d07c040412bc1f44ca8/assets/img/sample.PNG)
+
 ###################
 Instrucciones
 ###################
