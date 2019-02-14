@@ -26,7 +26,7 @@
 
                     <?php
                     $isExpanded = is_active_nav('crud', 'create') ||
-                        is_active_nav('crud');
+                        is_active_nav('crud') || is_active_nav('crud','edit');
                     ?>
                     <li>
                         <a href="#menu1" data-toggle="collapse" aria-expanded="<?=

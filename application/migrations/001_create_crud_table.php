@@ -11,6 +11,8 @@ class Migration_Create_crud_table extends CI_Migration
   `name` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `telephone` varchar(100) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `img_profile` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;");
     }

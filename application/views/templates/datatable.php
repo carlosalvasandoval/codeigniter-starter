@@ -29,4 +29,4 @@
         </a>
     </center>
 </div>
-<?php prepend_js(base_url('assets/js/common/common.js')) ?>
+<?php prepend_js(base_url('assets/js/common/common_datatable_config.js')) ?>
