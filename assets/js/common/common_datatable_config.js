@@ -1,8 +1,9 @@
 var d = new Date();
 var config_datatable = {
-  dom: 'Bfrtip',
+  dom: 'lBfrtip',
   "scrollX": true,
-  "lengthMenu": 30,
+  "pageLength": 75,
+  "lengthMenu": [ 25, 50, 75, 100],
   "language": {
     "sProcessing": "...Cargando...",
     "sLengthMenu": "Mostrar _MENU_ registros",
