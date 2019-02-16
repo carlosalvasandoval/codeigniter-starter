@@ -73,3 +73,7 @@ function main_filemanager_callback(field_id, img_container, input_img) {
   }
 
 }
+
+$('.chosen').chosen({
+  // Chosen options here
+});

@@ -18,9 +18,9 @@ class Datatables
         $this->table = $table;
     }
 
-    public function setSelect(array $str)
+    public function setSelect(array $array)
     {
-        $this->select = $str;
+        $this->select = $array;
     }
 
     public function setJoin($table, $condicion, $type = "INNER")

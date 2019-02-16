@@ -1,3 +1,5 @@
+<?php prepend_css(base_url('assets/vendor/bootstrap4-toggle-3.4.0/css/bootstrap4-toggle.min.css')) ?>
+<?php prepend_css(base_url('assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css')) ?>
 <div class="card" >
     <div class="card-body">
         <div class="text-center"> <h2 class="card-title"><?= $title ?></h2></div>
@@ -7,15 +9,37 @@
             <div class="row">
 
                 <div class="col-8">
-                    <div class="form-group">
-                        <label>Nombres</label>
-                        <input type="text" name="name" class="form-control" placeholder="Escribe nombre" value="<?= set_value('name', $name) ?>">
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label>Nombres</label>
+                            <input type="text" name="name" class="form-control" placeholder="Escribe nombre" value="<?= set_value('name', $name) ?>">
+                        </div>
+                        <div class="form-group col-3">
+                            <label>Situación marital</label><br>
+                            <input id="is_married" type="checkbox" name="is_married" value ="1" 
+                            <?= set_checkbox('is_married', $is_married, $is_married ? true : false); ?>
+                                   data-toggle="toggle" data-on="Casado" data-off="Soltero" 
+                                   data-onstyle="success" data-offstyle="danger">
+                        </div>
+                        <div class="form-group col-3">
+                            <label>Fecha de Nacimiento</label>
+                            <input type="text" name="birth_date" class="form-control datepicker" placeholder="fecha nacimiento"  value="<?= set_value('birth_date', $birth_date) ?>" readonly="readonly">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>Email</label>
+                            <input type="text" name="email" class="form-control" placeholder="Escribe email"  value="<?= set_value('email', $email) ?>">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>¿Deportes que te gustan?</label>
+                            <?= form_dropdown('preferences[]', $preference_options,
+                                set_value('preferences[]', $preference_selected),
+                                'class="form-control chosen" multiple data-placeholder="Elige tus preferencias..."');
+                            ?>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="text" name="email" class="form-control" placeholder="Escribe email"  value="<?= set_value('email', $email) ?>">
-                    </div>
+
+
 
                     <div class="form-group">
                         <label>Teléfono</label>
@@ -50,7 +74,7 @@
     </div>
 </div>
 <?php $this->load->view('templates/filemanager_modal') ?>
-
-<?php prepend_js(base_url('assets/js/crud/create_edit.js')) ?>
+<?php append_js(base_url('assets/vendor/bootstrap4-toggle-3.4.0/js/bootstrap4-toggle.min.js')) ?>
+<?php append_js(base_url('assets/js/crud/create_edit.js')) ?>
 <?php prepend_js(base_url('assets/vendor/tinymce/js/tinymce/tinymce.min.js')) ?>
 <?php prepend_js(base_url('assets/js/common/common_create_edit_form.js')) ?>

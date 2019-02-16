@@ -22,7 +22,7 @@ class Crud extends MY_Controller
             $data = $this->load_data();
             $this->load->template('crud/create_edit', $data);
         } else {
-            $data = post_mapping();
+            $data = $this->handleData();
             $this->Crud_model->create($data);
             create_flash_message("Operación exitosa");
             redirect(base_url('crud/index'));
@@ -36,7 +36,7 @@ class Crud extends MY_Controller
             $data = $this->load_data($crudId);
             $this->load->template('crud/create_edit', $data);
         } else {
-            $data = post_mapping();
+            $data = $this->handleData();
             $this->Crud_model->update($crudId, $data);
             create_flash_message("Operación exitosa");
             redirect(base_url('crud/index'));
@@ -67,15 +67,28 @@ class Crud extends MY_Controller
         $this->form_validation->set_rules('telephone', 'Teléfono', 'required|numeric');
     }
 
+    private function handleData()
+    {
+        $data                = post_mapping();
+        $data['is_married']  = isset($data['is_married']) ? $data['is_married'] : 0;
+        $data['preferences'] = implode(',', $data['preferences']);
+
+        return $data;
+    }
+
     private function load_data($crudId = 0)
     {
         $data = [
-            'name'        => null,
-            'email'       => null,
-            'telephone'   => null,
-            'description' => null,
-            'img_profile' => null,
-            'title'       => 'Registro de crud',
+            'name'                => null,
+            'birth_date'          => null,
+            'is_married'          => null,
+            'email'               => null,
+            'telephone'           => null,
+            'description'         => null,
+            'img_profile'         => null,
+            'preference_options'  => [ 'Fulbol' => 'Fulbol', 'Voley' => 'Voley', 'Tenis' => 'Tenis', 'Ping Pong' => 'Ping Pong', 'Basket' => 'Basket' ],
+            'preference_selected' => null,
+            'title'               => 'Registro de crud',
         ];
 
         if ($crudId != 0) {
@@ -83,12 +96,15 @@ class Crud extends MY_Controller
             if (empty($crudObj)) {
                 redirect(base_url('crud/index'));
             }
-            $data['name']        = $crudObj->name;
-            $data['email']       = $crudObj->email;
-            $data['telephone']   = $crudObj->telephone;
-            $data['description'] = $crudObj->description;
-            $data['img_profile'] = $crudObj->img_profile;
-            $data['title']       = 'Editar crud';
+            $data['name']                = $crudObj->name;
+            $data['birth_date']          = $crudObj->birth_date;
+            $data['is_married']          = $crudObj->is_married;
+            $data['email']               = $crudObj->email;
+            $data['preference_selected'] = explode(',', $crudObj->preferences);
+            $data['telephone']           = $crudObj->telephone;
+            $data['description']         = $crudObj->description;
+            $data['img_profile']         = $crudObj->img_profile;
+            $data['title']               = 'Editar crud';
         }
 
         return $data;

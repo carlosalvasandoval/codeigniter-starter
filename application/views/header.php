@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title></title>
-        <link href="<?php echo base_url('assets/vendor/chosen_v1.8.7/chosen.min.css') ?>" rel="stylesheet" type="text/css"/>
-        <link href="<?php echo base_url('assets/vendor/bootstrap-4.1.3-dist/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css"/>
-        <link href="<?php echo base_url('assets/vendor/fontawesome-free-5.7.1-web/css/all.min.css') ?>" rel="stylesheet" type="text/css"/>
-        <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.min.css') ?>" rel="stylesheet" type="text/css"/>
-        <link href="<?php echo base_url('assets/vendor/datatables/buttons.dataTables.min.css') ?>" rel="stylesheet" type="text/css"/>
+        <link href="<?= base_url('assets/vendor/Bootstrap-4-Chosen-Plugin/dist/css/component-chosen.min.css') ?>" rel="stylesheet" type="text/css"/>
+        <link href="<?= base_url('assets/vendor/bootstrap-4.1.3-dist/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css"/>
+        <link href="<?= base_url('assets/vendor/fontawesome-free-5.7.1-web/css/all.min.css') ?>" rel="stylesheet" type="text/css"/>
+        <link href="<?= base_url('assets/vendor/datatables/dataTables.bootstrap4.min.css') ?>" rel="stylesheet" type="text/css"/>
+        <link href="<?= base_url('assets/vendor/datatables/buttons.dataTables.min.css') ?>" rel="stylesheet" type="text/css"/>
 
-        <link href="<?php echo base_url('assets/css/site.css?t=' . time()) ?>" rel="stylesheet" type="text/css"/>
+        <link href="<?= base_url('assets/css/site.css?t=' . time()) ?>" rel="stylesheet" type="text/css"/>
     </head>
     <?php
     $rol        = $this->session->userdata('rol');
@@ -26,7 +26,7 @@
 
                     <?php
                     $isExpanded = is_active_nav('crud', 'create') ||
-                        is_active_nav('crud') || is_active_nav('crud','edit');
+                        is_active_nav('crud') || is_active_nav('crud', 'edit');
                     ?>
                     <li>
                         <a href="#menu1" data-toggle="collapse" aria-expanded="<?=

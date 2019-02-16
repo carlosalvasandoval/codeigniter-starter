@@ -1,13 +1,16 @@
 $('.datepicker').datepicker({
-    format: 'yyyy-mm',
-    language: 'es-ES',
-    showOnFocus: true,
-   viewMode: 1,
-    minViewMode:1
+  format: 'yyyy-mm-dd',
+  language: 'es-ES',
+  showOnFocus: true,
+  todayHighlight: true,
+  todayBtn: true,
+  toggleActive: true,
+  startView:2,
+  endDate:'-10y'
 });
 
 function filemanager_callback(field_id) {
-  main_filemanager_callback(field_id,'img_container', 'img_profile');
+  main_filemanager_callback(field_id, 'img_container', 'img_profile');
 }
 
 $('document').ready(function () {
@@ -16,8 +19,3 @@ $('document').ready(function () {
   }
 
 });
-
-
-
-
-

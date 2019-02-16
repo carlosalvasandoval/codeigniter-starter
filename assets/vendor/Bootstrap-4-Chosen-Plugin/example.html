@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Bootstrap 4 Chosen jQuery Plugin Examples</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="dist/css/component-chosen.css" rel="stylesheet">
+</head>
+<body class="h-100">
+  <div class="container h-100">
+    <div class="d-flex align-items-start flex-column h-100">
+      <form class="was-validated">
+        <div class="w-100 m-auto py-5">
+          <div class="row">
+            <h1>Bootstrap 4 Chosen jQuery Plugin Examples</h1>
+            <div class="jquery-script-ads" style="  margin:30px auto"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+            <div class="col-xs-12 col-md-4 mb-5">
+              <label>Single:</label>
+              <select id="single" class="form-control form-control-chosen" data-placeholder="Please select...">
+                <option></option>
+                <option>Option One</option>
+                <option>Option Two</option>
+                <option>Option Three</option>
+                <option>Option Four</option>
+                <option>Option Five</option>
+                <option>Option Six</option>
+                <option>Option Seven</option>
+                <option>Option Eight</option>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-4 mb-5">
+              <label>Single (required):</label>
+              <select id="required" class="form-control form-control-chosen-required" data-placeholder="Please select...">
+                <option></option>
+                <option>Option One</option>
+                <option>Option Two</option>
+                <option>Option Three</option>
+                <option>Option Four</option>
+                <option>Option Five</option>
+                <option>Option Six</option>
+                <option>Option Seven</option>
+                <option>Option Eight</option>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-4 mb-5">
+              <label>Multiple:</label>
+              <select id="multiple" class="form-control form-control-chosen" data-placeholder="Please select..." multiple>
+                <option></option>
+                <option>Option One</option>
+                <option>Option Two</option>
+                <option>Option Three</option>
+                <option>Option Four</option>
+                <option>Option Five</option>
+                <option>Option Six</option>
+                <option>Option Seven</option>
+                <option>Option Eight</option>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-4 mb-5">
+              <label>Optgroup:</label>
+              <select id="optgroup" class="form-control form-control-chosen" data-placeholder="Please select..." multiple>
+                <optgroup label="Label A">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three</option>
+                  <option>Option Four</option>
+                </optgroup>
+                <optgroup label="Label B">
+                  <option>Option Five</option>
+                  <option>Option Six</option>
+                  <option>Option Seven</option>
+                  <option>Option Eight</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-4 mb-5">
+              <label>Clickable optgroup:</label>
+              <select id="optgroup_clickable" class="form-control form-control-chosen-optgroup" title="clickable_optgroup" data-placeholder="Please select..." multiple>
+                <optgroup label="Label A">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three</option>
+                  <option>Option Four</option>
+                </optgroup>
+                <optgroup label="Label B">
+                  <option>Option Five</option>
+                  <option>Option Six</option>
+                  <option>Option Seven</option>
+                  <option>Option Eight</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.6/chosen.jquery.min.js"></script>
+  <script type="text/javascript">
+$('.form-control-chosen').chosen({
+  allow_single_deselect: true,
+  width: '100%'
+});
+$('.form-control-chosen-required').chosen({
+  allow_single_deselect: false,
+  width: '100%'
+});
+$('.form-control-chosen-search-threshold-100').chosen({
+  allow_single_deselect: true,
+  disable_search_threshold: 100,
+  width: '100%'
+});
+$('.form-control-chosen-optgroup').chosen({
+  width: '100%'
+});
+
+$(function() {
+  $('[title="clickable_optgroup"]').addClass('chosen-container-optgroup-clickable');
+});
+$(document).on('click', '[title="clickable_optgroup"] .group-result', function() {
+  var unselected = $(this).nextUntil('.group-result').not('.result-selected');
+  if(unselected.length) {
+    unselected.trigger('mouseup');
+  } else {
+    $(this).nextUntil('.group-result').each(function() {
+      $('a.search-choice-close[data-option-array-index="' + $(this).data('option-array-index') + '"]').trigger('click');
+    });
+  }
+});
+  </script>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
