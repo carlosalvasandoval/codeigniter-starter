@@ -1,5 +1,5 @@
 
-![](https://bytebucket.org/carlosalva/codeigniter-starter/raw/90060387beb47155f7671d07c040412bc1f44ca8/assets/img/sample.PNG)
+![](https://bytebucket.org/carlosalva/codeigniter-starter/raw/1ace9e464eba8e8df8b3b4de4a2ff21bd76beec7/assets/img/sample.PNG)
 
 ![](https://bitbucket.org/carlosalva/codeigniter-starter/raw/185db8cf4a2f2401108ae94558d8c43a776c8d4c/assets/img/sample2.PNG)
 
