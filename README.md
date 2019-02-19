@@ -1,15 +1,17 @@
 
 ![](https://bytebucket.org/carlosalva/codeigniter-starter/raw/90060387beb47155f7671d07c040412bc1f44ca8/assets/img/sample.PNG)
-![](https://bytebucket.org/carlosalva/codeigniter-starter/raw/90060387beb47155f7671d07c040412bc1f44ca8/assets/img/sample2.PNG)
+
+![](https://bitbucket.org/carlosalva/codeigniter-starter/raw/185db8cf4a2f2401108ae94558d8c43a776c8d4c/assets/img/sample2.PNG)
 
 **Acerca de**
+
 Este es un starter de codeigniter, en el podras encontrar un CRUD de ejemplo con diferentes elementos de como deben usarse.
 
-Para el crud utilice algunos plugis de javascript y bootstrap 4 para dejar todo listo.
-Si observas el controlador a detalle podras ver que esta optimizado y a mi criterio es la forma correcta como debes programarlo 
+Para el crud utilice algunos plugins de javascript, componentes bootstrap 4.
+Si observas el controlador CRUD a detalle podras ver que esta optimizado, considero es  la forma correcta como debes programarlo 
 (por supuesto se acepta mejoras.)
 
-Asi mismo he mejorado la librería datatable en php para que sea sencillo el uso de datatbles jquery.
+Asi mismo he mejorado la librería datatable en php para que sea sencillo el uso de datatables jquery.
 
 Como plantilla he utilizado un dashboard responsive hecho en bootstrap 4 para que tengas listo tu dashboard administrativo.
 He usado tecnicas de bootstrap:
@@ -25,6 +27,7 @@ TODO:
 
 - Para optimizar más aun el starter implementaré gulp para que genere archivos minificados de css y javascript y asi cargue aun más rapido la aplicación. 
 - incluir liberias de PHP para que soporte Namespaces
+- incluir crud login
 
 **Instrucciones**
 
