@@ -1,9 +1,33 @@
 
 ![](https://bytebucket.org/carlosalva/codeigniter-starter/raw/90060387beb47155f7671d07c040412bc1f44ca8/assets/img/sample.PNG)
+![](https://bytebucket.org/carlosalva/codeigniter-starter/raw/90060387beb47155f7671d07c040412bc1f44ca8/assets/img/sample2.PNG)
 
-###################
-Instrucciones
-###################
+**Acerca de**
+Este es un starter de codeigniter, en el podras encontrar un CRUD de ejemplo con diferentes elementos de como deben usarse.
+
+Para el crud utilice algunos plugis de javascript y bootstrap 4 para dejar todo listo.
+Si observas el controlador a detalle podras ver que esta optimizado y a mi criterio es la forma correcta como debes programarlo 
+(por supuesto se acepta mejoras.)
+
+Asi mismo he mejorado la librería datatable en php para que sea sencillo el uso de datatbles jquery.
+
+Como plantilla he utilizado un dashboard responsive hecho en bootstrap 4 para que tengas listo tu dashboard administrativo.
+He usado tecnicas de bootstrap:
+- helper customizado
+- language
+- form helpers
+- validations
+- migrations
+- query builder
+- etc
+
+TODO:
+
+- Para optimizar más aun el starter implementaré gulp para que genere archivos minificados de css y javascript y asi cargue aun más rapido la aplicación. 
+- incluir liberias de PHP para que soporte Namespaces
+
+**Instrucciones**
+
 
 1. los ambientes de desarrollo se maneja por variables de entorno. Debes copiar en la raiz el archivo 
 `.sample.htaccess` y luego renombrarlo a `.htaccess` dentro de el veras linea 20 aprox. 
@@ -23,7 +47,7 @@ No olvides cambiarle los valores según tu nececidad.
  
 
 *******************
-Manejo de javascript
+**Manejo de javascript**
 *******************
 
 Se debe imitar la misma estructura de la carpeta `controllers`. Por ejemplo
@@ -37,17 +61,18 @@ puedes poner un nombre generico e incluirlo al pie de página de la vista usando
 `<?php prepend_js(base_url('assets/js/crud/create_edit.js')) ?>`
 
 *********
-Recursos
+**Recursos Usados**
 *********
 
 -  [DataTables](https://datatables.net/)
 -  [CodeIgniter](https://codeigniter.com)
 -  [Bootstrap 4](https://getbootstrap.com/)
 -  [Font awesome 5](https://fontawesome.com/)
+-  [Side bar](https://bootstrapious.com/p/bootstrap-sidebar)
 
 
 *********
-Créditos
+**Créditos**
 *********
 
 -  [Carlos Alva Sandoval](https://www.linkedin.com/in/carlosalva/)
