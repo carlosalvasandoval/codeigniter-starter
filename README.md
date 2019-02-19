@@ -57,8 +57,10 @@ Se debe imitar la misma estructura de la carpeta `controllers`. Por ejemplo
 si el controlador se llamase `Crud`  y este tuviese una  function `index`
 para agregar un archivo javascript que ejecute una funcionalidad particular de esta vista,
 deberas crear una carpeta en `assets` conteniendo el javascript con el mismo nombre de la función, quedando asi,
-`assets/js/crud/index.js`.
+`assets/js/crud/index.js`. Si el archivo js sigue la misma estructura que el controller/funcion no necesitas declararlo dentro de la vista 
+ya que el helper lo hara por ti automaticmente;por oro lado si el archivo se llama de diferente forma y no sigue la estructura, ahi si debes incluirlo en la vista.
 
+*Ejemplo:*
 En ocasiones cuando necesitas reutilizar el mismo archivo javascript para 1 o muchas vistas
 puedes poner un nombre generico e incluirlo al pie de página de la vista usando el helper  
 `<?php prepend_js(base_url('assets/js/crud/create_edit.js')) ?>`
