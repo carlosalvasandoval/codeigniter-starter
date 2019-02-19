@@ -82,6 +82,7 @@ class Crud extends MY_Controller
             'name'                => null,
             'birth_date'          => null,
             'is_married'          => null,
+            'sex'                 => null,
             'email'               => null,
             'telephone'           => null,
             'description'         => null,
@@ -99,6 +100,7 @@ class Crud extends MY_Controller
             $data['name']                = $crudObj->name;
             $data['birth_date']          = $crudObj->birth_date;
             $data['is_married']          = $crudObj->is_married;
+            $data['sex']                 = $crudObj->sex;
             $data['email']               = $crudObj->email;
             $data['preference_selected'] = explode(',', $crudObj->preferences);
             $data['telephone']           = $crudObj->telephone;

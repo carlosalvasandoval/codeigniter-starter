@@ -16,8 +16,8 @@
                         </div>
                         <div class="form-group col-3">
                             <label>Situación marital</label><br>
-                            <input id="is_married" type="checkbox" name="is_married" value ="1" 
-                            <?= set_checkbox('is_married', $is_married, $is_married ? true : false); ?>
+                            <input id="is_married" type="checkbox" name="is_married" value="1" 
+                            <?= set_checkbox('is_married', 1, $is_married == 1); ?>
                                    data-toggle="toggle" data-on="Casado" data-off="Soltero" 
                                    data-onstyle="success" data-offstyle="danger">
                         </div>
@@ -31,19 +31,29 @@
                         </div>
                         <div class="form-group col-6">
                             <label>¿Deportes que te gustan?</label>
-                            <?= form_dropdown('preferences[]', $preference_options,
-                                set_value('preferences[]', $preference_selected),
-                                'class="form-control chosen" multiple data-placeholder="Elige tus preferencias..."');
+                            <?=
+                            form_dropdown('preferences[]', $preference_options, set_value('preferences[]', $preference_selected), 'class="form-control chosen" multiple data-placeholder="Elige tus preferencias..."');
                             ?>
                         </div>
-                    </div>
-
-
-
-
-                    <div class="form-group">
-                        <label>Teléfono</label>
-                        <input type="text" name="telephone" class="form-control" placeholder="Escribe teléfono"  value="<?= set_value('telephone', $telephone) ?>">
+                        <div class="form-group col-6">
+                            <label>Teléfono</label>
+                            <input type="text" name="telephone" class="form-control" placeholder="Escribe teléfono"  value="<?= set_value('telephone', $telephone) ?>">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>Sexo</label>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="sex"  value="H" <?= set_radio('sex', 'H', $sex == 'H'); ?> >
+                                    Hombre
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="sex"  value="M" <?= set_radio('sex', 'M', $sex == 'M'); ?>>
+                                    Mujer
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
