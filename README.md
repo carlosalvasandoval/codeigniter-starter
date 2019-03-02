@@ -5,16 +5,16 @@
 
 **Acerca de**
 
-Este es un starter de codeigniter, en el podras encontrar un CRUD de ejemplo con diferentes elementos de como deben usarse.
+Este es un starter de codeigniter, en el podras encontrar un CRUD de ejemplo con diferentes elementos de cómo deben usarse.
 
-Para el crud utilice algunos plugins de javascript, componentes bootstrap 4.
+Para el crud utilicé algunos plugins de javascript, componentes bootstrap 4.
 Si observas el controlador CRUD a detalle podras ver que esta optimizado, considero es  la forma correcta como debes programarlo 
 (por supuesto se acepta mejoras.)
 
 Asi mismo he mejorado la librería datatable en php para que sea sencillo el uso de datatables jquery.
 
 Como plantilla he utilizado un dashboard responsive hecho en bootstrap 4 para que tengas listo tu dashboard administrativo.
-He usado tecnicas de bootstrap:
+Algunos helpers de codeigniter:
 - helper customizado
 - language
 - form helpers
@@ -25,7 +25,6 @@ He usado tecnicas de bootstrap:
 
 TODO:
 
-- Para optimizar más aun el starter implementaré gulp para que genere archivos minificados de css y javascript y asi cargue aun más rapido la aplicación. 
 - incluir liberias de PHP para que soporte Namespaces
 - incluir crud login
 
@@ -47,6 +46,13 @@ No olvides cambiarle los valores según tu nececidad.
 4. Despues de crear y configurar tu base de datos ejecuta las migraciones ingresando a `localhost/codeigniter-starter/migrate`
 
 5. Revisa en tu base de datos se debió haber creado 2 tablas `crud` y `migrations`.
+
+6. Para optimizar tus archivos js y css puedes ejecutar `gulp` el cual te permitirá minificar los archivos css, scss y js.
+   Para que puedas ejecutar gulp debes tener instalado node.js en tu pc. Una vez instalado en tu consola vas a la ruta del proyecto y ejecutas
+   `npm install` el cual te descargara todas las librerias necesarias para las acciones de optimización. Asi mismo, si te gusta gestionar archivos scss (sass) 
+    en vez de css puro gulp lo convertira por tí. adicionalmente si te gusta usar ecmascript 6 para programar el front end pues gulp lo convertirá a javascript regular.
+    una vez ejecutado npm install debes ejecutar el comando `gulp watch` o `gulp watch_dev` para ambientes de producttion y desarrollo respectivamente. Veras que todos los archivos 
+    de las carpetas css, scss, js seran copiados a la carpeta `dist` y debe 
  
 
 *******************

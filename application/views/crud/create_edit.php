@@ -85,6 +85,6 @@
 </div>
 <?php $this->load->view('templates/filemanager_modal') ?>
 <?php append_js(base_url('assets/vendor/bootstrap4-toggle-3.4.0/js/bootstrap4-toggle.min.js')) ?>
-<?php append_js(base_url('assets/js/crud/create_edit.js')) ?>
+<?php append_js(base_url('assets/'.DIST_PATH.'/js/crud/create_edit.js')) ?>
 <?php prepend_js(base_url('assets/vendor/tinymce/js/tinymce/tinymce.min.js')) ?>
-<?php prepend_js(base_url('assets/js/common/common_create_edit_form.js')) ?>
+<?php prepend_js(base_url('assets/'.DIST_PATH.'/js/common/common_create_edit_form.js')) ?>

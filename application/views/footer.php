@@ -15,7 +15,7 @@
 <script src="<?=base_url('assets/vendor/datatables/pdfmake.min.js'); ?>" type="text/javascript"></script>
 <script src="<?=base_url('assets/vendor/datatables/vfs_fonts.js'); ?>" type="text/javascript"></script>
 
-<script type="text/javascript" src="<?= base_url('assets/js/site.js?t=' . time()) ?>"></script>
+<script type="text/javascript" src="<?= base_url('assets/'.DIST_PATH.'/js/site.js?t=' . time()) ?>"></script>
 <script type="text/javascript">
     var BASE_URL = '<?=base_url() ?>';
 </script>

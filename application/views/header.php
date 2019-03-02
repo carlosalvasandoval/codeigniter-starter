@@ -9,8 +9,7 @@
         <link href="<?= base_url('assets/vendor/fontawesome-free-5.7.1-web/css/all.min.css') ?>" rel="stylesheet" type="text/css"/>
         <link href="<?= base_url('assets/vendor/datatables/dataTables.bootstrap4.min.css') ?>" rel="stylesheet" type="text/css"/>
         <link href="<?= base_url('assets/vendor/datatables/buttons.dataTables.min.css') ?>" rel="stylesheet" type="text/css"/>
-
-        <link href="<?= base_url('assets/css/site.css?t=' . time()) ?>" rel="stylesheet" type="text/css"/>
+        <link href="<?= base_url('assets/'.DIST_PATH.'/css/site.css?t=' . time()) ?>" rel="stylesheet" type="text/css"/>
     </head>
     <?php
     $rol        = $this->session->userdata('rol');

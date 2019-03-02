@@ -131,7 +131,11 @@ function include_default_js()
     $ci            = & get_instance();
     $class         = $ci->router->fetch_class();
     $action        = $ci->router->fetch_method();
-    $relative_path = 'assets/js/' . $class . '/' . $action . '.js';
+    $filePath = 'assets/js/';
+    if(ENVIRONMENT != 'development'){
+         $filePath = 'assets/dist/js/';
+    }
+    $relative_path = $filePath . $class . '/' . $action . '.js';
     if (file_exists(FCPATH . $relative_path)) {
         echo '<script type = "text/javascript" src ="' . base_url($relative_path . '?time=' . time()) . '"></script>'. "\n";
     }
@@ -142,7 +146,11 @@ function include_default_css()
     $ci            = & get_instance();
     $class         = $ci->router->fetch_class();
     $action        = $ci->router->fetch_method();
-    $relative_path = 'assets/css/' . $class . '/' . $action . '.css';
+    $filePath = 'assets/css/';
+    if(ENVIRONMENT != 'development'){
+         $filePath = 'assets/dist/css/';
+    }
+    $relative_path = $filePath . $class . '/' . $action . '.css';
     if (file_exists(FCPATH . $relative_path)) {
         echo '<link href="' . base_url($relative_path . '?time=' . time()) . '" rel="stylesheet" type="text/css"/>';
     }

@@ -35,3 +35,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 .htaccess
 /assets/img/source/
 /assets/img/thumbs/
+/node_modules/
