@@ -12,7 +12,7 @@ class Migration_Create_crud_table extends CI_Migration
   `is_married` char(1) DEFAULT 0,
   `sex` char(1) DEFAULT NULL,
   `preferences` set('Fulbol', 'Voley', 'Tenis', 'Ping Pong', 'Basket') DEFAULT NULL,
-  `birth_date`  date DEFAULT NULL,,
+  `birth_date`  date DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `telephone` varchar(100) DEFAULT NULL,
   `description` text DEFAULT NULL,
