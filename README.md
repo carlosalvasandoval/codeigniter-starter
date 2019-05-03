@@ -52,7 +52,7 @@ No olvides cambiarle los valores según tu nececidad.
    `npm install` el cual te descargara todas las librerias necesarias para las acciones de optimización. Asi mismo, si te gusta gestionar archivos scss (sass) 
     en vez de css puro gulp lo convertira por tí. adicionalmente si te gusta usar ecmascript 6 para programar el front end pues gulp lo convertirá a javascript regular.
     una vez ejecutado npm install debes ejecutar el comando `gulp watch` o `gulp watch_dev` para ambientes de producttion y desarrollo respectivamente. Veras que todos los archivos 
-    de las carpetas css, scss, js seran copiados a la carpeta `dist` y debe 
+    de las carpetas css, scss, js seran copiados a la carpeta `dist` asi que ten encuenta esto al momento de de incluir algún estilo o script en alguna vista. 
  
 
 *******************

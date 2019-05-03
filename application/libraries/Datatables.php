@@ -90,7 +90,7 @@ class Datatables
         }
 
         if ((int) $_GET['start'] != 0) {
-            $limit = " LIMIT ".(int) $_GET['start']." OFFSET ".(int) $_GET['length']." ";
+            $limit = " LIMIT ".(int) $_GET['length']." OFFSET ".(int) $_GET['start']." ";
         } else {
             $limit = " LIMIT ".(int) $_GET['length'];
         }
