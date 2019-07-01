@@ -88,6 +88,7 @@ you can put a generic name and include it in the footer of the view using the he
 
 
 ================================================================TRADUCCIÓN AL ESPAÑOL===================================================================
+
 **Acerca de**
 
 Este es un starter de codeigniter, en el podras encontrar un CRUD de ejemplo con diferentes elementos de cómo deben usarse.
