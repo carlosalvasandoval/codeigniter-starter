@@ -3,6 +3,91 @@
 
 ![](https://bitbucket.org/carlosalva/codeigniter-starter/raw/185db8cf4a2f2401108ae94558d8c43a776c8d4c/assets/img/sample2.PNG)
 
+**About**
+
+This is a codeigniter starter, in which you can find a CRUD example with different ui components of how they should be used.
+
+For the crud I used some javascript plugins and bootstrap 4 components. If you look at the CRUD controller in detail you can see that it is optimized, I think it is the correct way you should develop it (of course improvements are welcome.)
+
+Likewise I have improved the datatable library in php to make the use of jquery datatables easier.
+
+As a template I've used a responsive dashboard made in bootstrap 4 so that you have your admin dashboard ready. Some codeigniter helpers:
+
+- helper customized
+- language
+- form helpers
+- validations
+- migrations
+- query builder
+- etc
+
+TODO:
+
+- Make codeigniter support NameSpaces
+- Crud login
+
+**Instructions**
+
+1. The development environments are managed by environment variables. You must copy the file to the root
+`.sample.htaccess` and then rename it to` .htaccess`. In line 20 approx. you would see
+`SetEnv CI_ENV development` where `development` is the environment the application will run.
+
+2. In `application / config` you should create a folder and name it like the environment that you manage
+(i.e development, testing or production).
+
+3. Copy and rename the files `config.sample.php` and` database.sample.php`
+(`config.php` and` database.php` respectively) in the folder
+corresponding to the configured environment. example `config / development / database.php` and` config / development / config.php`.
+Do not forget to change the values ​​according your needs.
+
+4. After creating and configuring your database, execute the migrations by going local URL  i.e `localhost/codeigniter-starter/migrate`
+
+5. Check in your database. it should have created 2 tables `crud` and` migrations`.
+
+6. To optimize your js and css files you can run `gulp` which will allow you to minify the css, scss and js files.
+   In order to run gulp you must have node.js installed on your pc. Once installed, in your console you go to the project path and execute
+   `npm install` which will download all the libraries needed for optimization actions. Likewise, if you like to manage files scss (sass)
+    instead of pure css gulp he will convert them for you. 
+Additionally if you like to use ecmascript 6 to code the front end , gulp will convert it to regular javascript.
+    Once executed npm install you must execute the `gulp watch` or` gulp watch_dev` command in console for production and development environments respectively. 
+All the files (css, scss, js ) will be copied to the `dist` folder so keep this in mind when including any style or script in any view.
+
+
+*******************
+**handle javascript**
+*******************
+
+The same structure of the `controllers` folder should be imitated. For example
+if the controller was called `Crud` and it has `index` function, then if you want add a particular javascript for that view you should
+ create a folder in `assets` containing the javascript with the same name of the function, thus remaining,
+`assets/js/crud/index.js`. If the js file follows the same structure as the controller/function, you do not need to declare it within the view
+since the helper will do it for you automatically, by the other side, if the file is named differently and does not follow the structure, there if you must include it in the view.
+
+*Example:*
+Sometimes when you need to rehuse the same javascript file for 1 or many views
+you can put a generic name and include it in the footer of the view using the helper
+`<? php prepend_js (base_url ('assets/js/crud/create_edit.js'))?>`
+
+*********
+**Resources icluded**
+*********
+
+-  [DataTables](https://datatables.net/)
+-  [CodeIgniter](https://codeigniter.com)
+-  [Bootstrap 4](https://getbootstrap.com/)
+-  [Font awesome 5](https://fontawesome.com/)
+-  [Side bar](https://bootstrapious.com/p/bootstrap-sidebar)
+
+
+*********
+**Credits**
+*********
+
+-  [Carlos Alva Sandoval](https://www.linkedin.com/in/carlosalva/)
+
+
+
+================================================================TRADUCCIÓN AL ESPAÑOL===================================================================
 **Acerca de**
 
 Este es un starter de codeigniter, en el podras encontrar un CRUD de ejemplo con diferentes elementos de cómo deben usarse.
@@ -23,7 +108,7 @@ Algunos helpers de codeigniter:
 - query builder
 - etc
 
-TODO:
+POR HACER:
 
 - incluir liberias de PHP para que soporte Namespaces
 - incluir crud login
@@ -64,7 +149,7 @@ si el controlador se llamase `Crud`  y este tuviese una  function `index`
 para agregar un archivo javascript que ejecute una funcionalidad particular de esta vista,
 deberas crear una carpeta en `assets` conteniendo el javascript con el mismo nombre de la función, quedando asi,
 `assets/js/crud/index.js`. Si el archivo js sigue la misma estructura que el controller/funcion no necesitas declararlo dentro de la vista 
-ya que el helper lo hara por ti automaticmente;por oro lado si el archivo se llama de diferente forma y no sigue la estructura, ahi si debes incluirlo en la vista.
+ya que el helper lo hara por ti automaticmente;por otro lado si el archivo se llama de diferente forma y no sigue la estructura, ahi si debes incluirlo en la vista.
 
 *Ejemplo:*
 En ocasiones cuando necesitas reutilizar el mismo archivo javascript para 1 o muchas vistas

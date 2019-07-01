@@ -211,7 +211,7 @@ class Datatables
         $sql_all_data = "SELECT COUNT(*) AS found_rows FROM ".$sTable.$join.$where.$wherein;
 
         $new_query = $CI->db->query($sql_all_data);
-        if (count($new_query->row()) > 0) {
+        if ($new_query->row()->found_rows > 0) {
             $iFilteredTotal = $new_query->row()->found_rows;
         } else {
             $iFilteredTotal = $iTotal;
